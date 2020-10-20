@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtDisciplinaAf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtNota1Af"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtNota1"
+        android:layout_below="@id/txtDisciplinaAf"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtNota1Af"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/digite_a_nota_a1"
+        android:inputType="textPersonName|numberDecimal"
+        android:layout_below="@id/txtNota1Af"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txtNota2Af"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtNota2"
+        android:layout_below="@id/edtNota1Af"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtNota2Af"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNota2Af"
+        android:ems="10"
+        android:hint="@string/digite_a_nota_a2"
+        android:inputType="numberDecimal"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txtNotaAf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNota2Af"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/txtNota3"/>
+
+    <EditText
+        android:id="@+id/edtNotaAf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNotaAf"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/digite_a_nota_af"
+        android:inputType="numberDecimal"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnCalcularNotaAf"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSituacaoAf"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ACB5C2"
+        android:text="@string/btnCalcularNota"/>
+
+    <TextView
+        android:id="@+id/txtNotaFinalAf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtNotaAf"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtSituacaoAf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNotaFinalAf"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnCancelarAf"
+        android:text="@string/btnCancelar"
+        android:layout_below="@id/btnCalcularNotaAf"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="btnCalcularAf"/>
+
+
+</RelativeLayout>

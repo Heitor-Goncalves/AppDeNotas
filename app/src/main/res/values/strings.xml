@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Unicid</string>
+    <string-array name="cursos">
+        <item>Selecione o curso...</item>
+        <item>"Ciência da Computação"</item>
+        <item>Análise e Desenvolvimento de Sistemas</item>
+        <item>Redes de Computadores</item>
+        <item>Engenharia de Software</item>
+    </string-array>
+    
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnAvancar">Avançar</string>
+    <string name="btnCalcularNota">Calcular Nota</string>
+    <string name="btnCalcularNotaAf">Calcular Nota com Af</string>
+    <string name="txtRgm">RGM:</string>
+    <string name="txtNome">Nome:</string>
+    <string name="txtCurso">Curso:</string>
+    <string name="txtTurma">Turma:</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="txtDisciplina">Disciplinas</string>
+    <string name="btnVoltar">Voltar</string>
+    <string name="txtNota1">Nota A1</string>
+    <string name="txtNota2">Nota A2</string>
+    <string name="txtNota3">Nota Af</string>
+    <string name="digite_a_nota_a2">Digite a nota A2</string>
+    <string name="digite_a_nota_a1">Digite a nota A1</string>
+    <string name="digite_a_nota_af">Digite a nota AF</string>
+    <string name="voltar">Voltar</string>
+    <string name="avan_ar">Avançar</string>
+    <string name="disciplinas">Disciplinas</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Disciplina">
+
+    <EditText
+        android:id="@+id/edtDisciplina"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_toRightOf ="@id/edtDisciplina"
+        android:layout_marginTop="20dp"/>
+
+    <FrameLayout
+        android:id="@+id/disciplinas"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/btnSalvar"
+        android:layout_marginTop="70dp"
+        android:background="#aaaaaa">
+
+      <ScrollView
+          android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listaDisciplinas"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+
+      </ScrollView>
+
+    </FrameLayout>
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_below="@id/disciplinas"
+        android:text="@string/voltar"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnAvancar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/avan_ar"
+        android:layout_below="@id/disciplinas"
+        android:layout_toEndOf="@id/btnVoltar"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSalvar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/disciplinas"
+        android:textSize="24sp" />
+</RelativeLayout>
