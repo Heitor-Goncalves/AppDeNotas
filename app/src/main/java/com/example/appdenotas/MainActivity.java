@@ -9,34 +9,49 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    public Spinner SpinCursos;
+    public EditText nome;
+    public EditText rgm;
+    public Button btnAvancar;
+    public EditText turma;
+    public String nomeAluno;
+    public String turmaAluno;
+    public String rgmAluno;
+    public String cursoAluno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       Spinner SpinCursos = (Spinner) findViewById(R.id.SpinCursos);
+       SpinCursos = (Spinner) findViewById(R.id.SpinCursos);
 
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.cursos, android.R.layout.simple_spinner_item);
 
         SpinCursos.setAdapter(adapter);
 
-        final EditText nome = (EditText) findViewById(R.id.edtNome);
-        final EditText turma = (EditText) findViewById(R.id.edtTurma);
-        final EditText rgm = (EditText) findViewById(R.id.edtRGM);
+        nome = (EditText) findViewById(R.id.edtNome);
+        turma = (EditText) findViewById(R.id.edtTurma);
+        rgm = (EditText) findViewById(R.id.edtRGM);
         SpinCursos = (Spinner) findViewById(R.id.SpinCursos);
-        Button btnAvancar = (Button) findViewById(R.id.btnAvancar);
+        btnAvancar = (Button) findViewById(R.id.btnAvancar);
 
-        String nomeAluno = nome.getText().toString();
-        String turmaAluno = turma.getText().toString();
-        String rgmAluno = rgm.getText().toString();
-        String cursoAluno = SpinCursos.getSelectedItem().toString();
+        nomeAluno = nome.getText().toString();
+        turmaAluno = turma.getText().toString();
+        rgmAluno = rgm.getText().toString();
+        cursoAluno = SpinCursos.getSelectedItem().toString();
 
+
+
+    }
+
+    public void btnAvancar(View v){
+        Intent disciplinaActivity = new Intent(this, Disciplina.class);
         Intent CalcularNotaActivity = new Intent(this, CalcularNota.class);
 
         Bundle bundle = new Bundle();
@@ -46,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("curso", cursoAluno);
         CalcularNotaActivity.putExtras(bundle);
 
-    }
-
-    public void btnAvancar(View v){
-        Intent disciplinaActivity = new Intent(this, Disciplina.class);
         startActivity(disciplinaActivity);
     }
 
@@ -57,9 +68,4 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void btnCalcularNota(View view) {
-    }
-
-    public void btnCalcularAf(View view) {
-    }
 }

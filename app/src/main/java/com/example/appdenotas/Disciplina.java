@@ -15,18 +15,21 @@ import java.util.ArrayList;
 
 public class Disciplina extends ListActivity {
 
-    private ArrayList<String> disciplina = new ArrayList<String>();
+    public ArrayList<String> disciplina = new ArrayList<String>();
+    public Button btnSalvar;
+    public EditText edtDisciplina;
+    public String listaDisciplina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disciplina);
 
-        final Button btnSalvar = findViewById(R.id.btnSalvar);
+        btnSalvar = findViewById(R.id.btnSalvar);
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                EditText edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
-                String listaDisciplina = edtDisciplina.getText().toString();
+                edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
+                listaDisciplina = edtDisciplina.getText().toString();
                 if ((listaDisciplina != null) &&(!listaDisciplina.equals(""))) {
                     disciplina.add(edtDisciplina.getText().toString());
                     limparDisciplina();
@@ -37,7 +40,7 @@ public class Disciplina extends ListActivity {
 
     }
     private  void limparDisciplina(){
-        EditText edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
+        edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
         edtDisciplina.setText("");
         edtDisciplina.requestFocus();
     }

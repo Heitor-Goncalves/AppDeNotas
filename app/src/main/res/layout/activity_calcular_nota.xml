@@ -83,8 +83,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/btnCalcularNotaAf"
-        android:onClick="btnCalcularAf"/>
+        android:text="@string/btnCalcularNotaAf" />
 
     <TextView
         android:id="@+id/txtNomeAluno"
