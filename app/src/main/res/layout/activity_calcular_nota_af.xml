@@ -111,15 +111,15 @@
 
     <Button
         android:id="@+id/btnCancelarAf"
-        android:text="@string/btnCancelar"
-        android:layout_below="@id/btnCalcularNotaAf"
-        android:layout_centerHorizontal="true"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalcularNotaAf"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:onClick="btnCalcularAf"/>
+        android:onClick="btnFechar"
+        android:text="@string/btnCancelar" />
 
 
 </RelativeLayout>

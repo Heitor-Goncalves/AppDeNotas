@@ -96,9 +96,9 @@ public class CalcularNota extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("disciplina",disciplinaClic);
 
-                //Intent calcularNotaAf = new Intent(this,CalcularNotaAf.class);
-                //calcularNotaAf.putExtras(bundle);
-                //startActivity(calcularNotaAf);
+                Intent calcularNotaAf = new Intent(this,CalcularNotaAf.class);
+                calcularNotaAf.putExtras(bundle);
+                startActivity(calcularNotaAf);
             }
         });
     }
