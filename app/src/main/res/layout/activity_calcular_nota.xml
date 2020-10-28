@@ -7,22 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtDisciplina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:textAlignment="center"
-        android:textColor="#3F51B5"
-        android:textSize="24sp" />
-
-    <TextView
         android:id="@+id/txtNota1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtNota1"
-        android:layout_below="@id/txtCursoAluno"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"/>
@@ -32,11 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName|numberDecimal"
+        android:inputType="numberDecimal"
         android:layout_below="@id/txtNota1"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
         android:autofillHints="" />
 
     <TextView
@@ -56,9 +41,6 @@
         android:layout_below="@id/txtNota2"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
         android:autofillHints="" />
 
     <Button
@@ -71,8 +53,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="10dp"
         android:background="#ACB5C2"
-        android:text="@string/btnCalcularNota"
-        android:onClick="btnCalcularNota"/>
+        android:text="@string/btnCalcularNota" />
 
     <Button
         android:id="@+id/btnCalcularAf"
@@ -84,38 +65,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/btnCalcularNotaAf" />
-
-    <TextView
-        android:id="@+id/txtNomeAluno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDisciplina"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/txtRgmAluno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtNomeAluno"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/txtTurma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtRgmAluno"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/txtCursoAluno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTurma"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/txtNotaFinal"

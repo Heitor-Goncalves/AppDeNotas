@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true"
+    android:scrollbars="none" >
 
-    <TextView
-        android:id="@+id/txtDisciplinaAf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
     <TextView
         android:id="@+id/txtNota1Af"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtNota1"
-        android:layout_below="@id/txtDisciplinaAf"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"/>
@@ -32,8 +28,6 @@
         android:hint="@string/digite_a_nota_a1"
         android:inputType="textPersonName|numberDecimal"
         android:layout_below="@id/txtNota1Af"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
         android:autofillHints="" />
 
     <TextView
@@ -54,8 +48,6 @@
         android:ems="10"
         android:hint="@string/digite_a_nota_a2"
         android:inputType="numberDecimal"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
         android:autofillHints="" />
 
     <TextView
@@ -73,8 +65,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtNotaAf"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/digite_a_nota_af"
         android:inputType="numberDecimal"
@@ -86,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtSituacaoAf"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="#ACB5C2"
         android:text="@string/btnCalcularNota"/>
@@ -121,5 +111,5 @@
         android:onClick="btnFechar"
         android:text="@string/btnCancelar" />
 
-
 </RelativeLayout>
+</ScrollView>

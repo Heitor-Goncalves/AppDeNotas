@@ -19,18 +19,12 @@ public class CalcularNotaAf extends AppCompatActivity {
     public TextView txtSituacaoAf;
     public TextView txtNotaFinalAf;
     public Button btnCalcularNotaAf;
+    public Double notaFinal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcular_nota_af);
-
-        Intent disciplina = getIntent();
-        Bundle disciplinaclicada = disciplina.getExtras();
-        String sDisciplina = disciplinaclicada.getString("disciplina");
-
-        TextView txtDisciplinaAf = (TextView) findViewById(R.id.txtDisciplinaAf);
-        txtDisciplinaAf.setText(sDisciplina);
 
         edtNota1 = (EditText) findViewById(R.id.edtNota1Af);
         edtNota2 = (EditText) findViewById(R.id.edtNota2Af);
@@ -47,7 +41,11 @@ public class CalcularNotaAf extends AppCompatActivity {
                 Double nota2 = Double.parseDouble(edtNota2.getText().toString());
                 Double nota3 = Double.parseDouble(edtNota3.getText().toString());
 
-                Double notaFinal = nota1 + nota2 + nota3;
+                if(nota1>nota2){
+                    notaFinal = nota1 + nota3;
+                }else if(nota2>nota1){
+                    notaFinal= nota2 + nota3;
+                }
 
                 txtNotaFinalAf.setText(notaFinal.toString());
 
@@ -62,6 +60,8 @@ public class CalcularNotaAf extends AppCompatActivity {
                     txtSituacaoAf.setText("Reprovado");
                     txtSituacaoAf.setTextColor(getColor(R.color.corReprovado));
                 }
+
+
             }
         });
     }

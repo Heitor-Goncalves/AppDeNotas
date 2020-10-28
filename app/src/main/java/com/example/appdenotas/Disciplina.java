@@ -15,29 +15,17 @@ import java.util.ArrayList;
 
 public class Disciplina extends ListActivity {
 
-    public ArrayList<String> disciplina = new ArrayList<String>();
-    public Button btnSalvar;
+    private ArrayList<String> disciplina = new ArrayList<String>();
     public EditText edtDisciplina;
-    public String listaDisciplina;
+    public String novaDisciplina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disciplina);
 
-        btnSalvar = findViewById(R.id.btnSalvar);
-        btnSalvar.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
-                listaDisciplina = edtDisciplina.getText().toString();
-                if ((listaDisciplina != null) &&(!listaDisciplina.equals(""))) {
-                    disciplina.add(edtDisciplina.getText().toString());
-                    limparDisciplina();
-                    atualizaLista();
-                }
-            }
-        });
-
+       atualizaLista();
+       limparDisciplina();
     }
     private  void limparDisciplina(){
         edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
@@ -64,4 +52,15 @@ public class Disciplina extends ListActivity {
 
             startActivity(CalcularNotaActivity);
     }
+    public void btnSalvarOnClick(View v) {
+        edtDisciplina = (EditText) findViewById(R.id.edtDisciplina);
+        novaDisciplina = edtDisciplina.getText().toString();
+        if ((novaDisciplina != null) &&(!novaDisciplina.equals(""))) {
+            disciplina.add(edtDisciplina.getText().toString());
+            limparDisciplina();
+            atualizaLista();
+            }
+        }
+
+        public void btnFechar(View v){ finish(); }
 }

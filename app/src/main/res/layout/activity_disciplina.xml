@@ -8,63 +8,41 @@
 
     <EditText
         android:id="@+id/edtDisciplina"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-        android:autofillHints="" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btnSalvar"/>
 
     <Button
         android:id="@+id/btnSalvar"
-        android:layout_width="wrap_content"
+        android:layout_width="250px"
         android:layout_height="wrap_content"
-        android:text="Salvar"
-        android:layout_toRightOf ="@id/edtDisciplina"
-        android:layout_marginTop="20dp"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="btnSalvarOnClick"
+        android:text="Salvar" />
 
-    <FrameLayout
-        android:id="@+id/disciplinas"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_below="@id/btnSalvar"
-        android:layout_marginTop="70dp"
-        android:background="#aaaaaa">
 
-      <ScrollView
-          android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@id/txtTitulo" />
 
-        <ListView
-            android:id="@+id/listaDisciplinas"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent" />
 
-      </ScrollView>
-
-    </FrameLayout>
     <Button
         android:id="@+id/btnVoltar"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_below="@id/disciplinas"
-        android:text="@string/voltar"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:id="@+id/btnAvancar"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="@string/avan_ar"
-        android:layout_below="@id/disciplinas"
-        android:layout_toEndOf="@id/btnVoltar"
-        android:layout_marginTop="20dp"/>
+        android:layout_below="@android:id/list"
+        android:layout_marginTop="20dp"
+        android:onClick="btnFechar"
+        android:text="Cancelar"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/Titulo"
+        android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSalvar"

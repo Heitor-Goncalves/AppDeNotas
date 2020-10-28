@@ -46,23 +46,13 @@ public class MainActivity extends AppCompatActivity {
         rgmAluno = rgm.getText().toString();
         cursoAluno = SpinCursos.getSelectedItem().toString();
 
-
-
     }
 
     public void btnAvancar(View v){
         Intent disciplinaActivity = new Intent(this, Disciplina.class);
-        Intent CalcularNotaActivity = new Intent(this, CalcularNota.class);
-
-        Bundle bundle = new Bundle();
-        bundle.putString("nome", nomeAluno);
-        bundle.putString("rgm", rgmAluno);
-        bundle.putString("turma", turmaAluno);
-        bundle.putString("curso", cursoAluno);
-        CalcularNotaActivity.putExtras(bundle);
-
         startActivity(disciplinaActivity);
     }
+
 
     public void btnFechar(View v){
         finish();
